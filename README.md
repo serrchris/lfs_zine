@@ -1,37 +1,15 @@
-# LFS 30th Anniversary Zine — Digital Flipbook
+# LFS Zine — minimal flipbook (updated design)
 
-A ready-to-host, **22-page**, mobile-friendly digital flipbook built from the supplied `Zine.pdf`.
+This version has the original 22 illustrated pages, a white interface, collage-style heading, **All Pages** thumbnail gallery, and two navigation arrows. All other interface copy, page numbers, progress indicators, and footers were removed.
 
-## Publish for free with GitHub Pages
+Turning pages is optimized: nearby page images preload before animation; desktop turns use a GPU-composited 3D leaf animation; phones use a faster slide-in transition. Pages can still be enlarged by tapping them, and swipe and keyboard navigation work.
 
-1. Sign in at https://github.com and create a **public** repository named `lfs-zine` (or any name you like).
-2. Open the repository. Choose **Add file → Upload files**. Upload **all the contents of this folder**, not the enclosing folder itself. Keep the `pages` subfolder and the files inside it. GitHub's browser uploader accepts dragged folders on supported browsers; alternatively use GitHub Desktop to commit the unzipped folder if a folder upload does not work.
-3. Commit the files to the `main` branch.
-4. Go to **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**. Set branch to **main** and folder to **/(root)**, then **Save**.
-5. GitHub will display the published URL once deployment completes. It will look like `https://YOUR-USERNAME.github.io/lfs-zine/`.
-6. Open that URL on a phone or iPad and test the arrows, swipe navigation, and zoom. Turn the URL into a QR code using your preferred QR code maker.
+## Updating your existing GitHub Pages site
 
-See GitHub's official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+1. Download and unzip the ZIP file.
+2. Open your repository, `https://github.com/serrchris/lfs_zine` (or its current name).
+3. Upload the **contents** of the extracted folder (not the ZIP or its enclosing folder) into the repository root. Include `index.html`, `style.css`, `script.js`, `.nojekyll`, `README.md`, and the entire `pages` folder.
+4. When GitHub asks about files already there, **replace/overwrite** those files. Commit the changes to `main`. If the browser uploader cannot overwrite existing files, delete the old `index.html`, `style.css` and `script.js` in the repository before uploading the new files, or use GitHub Desktop to replace them in one commit.
+5. In **Settings → Pages**, keep **Deploy from a branch → main → /(root)**. Once deployed, refresh `https://serrchris.github.io/lfs_zine/`. A hard refresh (Mac: Cmd+Shift+R) can help if the old version remains cached.
 
-## How the flipbook works
-
-- On a desktop: the cover is shown by itself, followed by two-page spreads, ending with the back cover.
-- On phones and tablets with narrow screens: one page at a time.
-- Tap a page, or use **Enlarge**, to see the page on a larger scale.
-- Use on-screen arrows, keyboard arrow keys, or swipe left/right on touchscreens.
-- **All pages** opens the page browser / thumbnails.
-- The reader remembers the last page you visited in that browser; you can also share a specific page with a URL ending in `?page=12`.
-- All resources are local. No subscriptions, external libraries, accounts, analytics, or trackers are needed for readers.
-
-## Edit the website
-
-- `index.html` contains the interface.
-- `style.css` contains the design and responsive layout.
-- `script.js` contains the controls.
-- `pages/01.webp` through `pages/22.webp` are images converted from the PDF.
-
-The website does not need the original PDF to function. Images were used to ensure the original collage typography and imagery stay in place and the website remains quick to load.
-
-## Public-sharing note
-
-GitHub Pages publishes the zine publicly on the internet. Confirm that the publication has appropriate permissions for included student work and photos before publishing the repository.
+All assets are local; there are no external dependencies. The site can be hosted for free on GitHub Pages. The zine is publicly accessible once published, so confirm permission for included student images and writing.
