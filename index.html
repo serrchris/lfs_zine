@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff"><meta name="description" content="LFS 30th Anniversary student zine — digital flipbook.">
+<title>LFS Zine — 30th Anniversary</title>
+<link rel="icon" href="pages/01.webp" type="image/webp"><link rel="preload" href="pages/01.webp" as="image">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="site">
+<header class="header">
+  <h1 class="collage" aria-label="LFS Zine"><span>L</span><span>F</span><span>S</span><span class="space"></span><span>Z</span><span>I</span><span>N</span><span>E</span></h1>
+  <button class="all-pages" id="allPages" aria-controls="drawer" aria-expanded="false">All Pages <span class="grid-glyph" aria-hidden="true">▦</span></button>
+</header>
+<main class="stage" aria-label="Flipbook reader">
+ <button id="previous" class="arrow" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg></button>
+ <div class="book-wrap"><div id="book" class="book" aria-label="LFS anniversary zine"><div id="left" class="page left"></div><div id="right" class="page right"></div><div id="leaf" class="leaf" aria-hidden="true"><div class="leaf-face front"></div><div class="leaf-face back"></div></div><div id="mobileLayer" class="mobile-layer" aria-hidden="true"></div></div></div>
+ <button id="next" class="arrow" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg></button>
+</main>
+</div>
+<div id="shade" class="shade" hidden></div>
+<aside id="drawer" class="drawer" aria-label="All pages" aria-hidden="true"><div class="drawer-top"><h2>All Pages</h2><button id="closeDrawer" class="close" aria-label="Close all pages">×</button></div><div id="thumbnails" class="thumbnails"></div></aside>
+<div id="zoom" class="zoom" role="dialog" aria-modal="true" aria-label="Page enlarged" hidden><button id="closeZoom" class="close zoom-close" aria-label="Close enlarged view">×</button><button id="zoomPrev" class="arrow" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg></button><img id="zoomImg" alt="Enlarged zine page"><button id="zoomNext" class="arrow" aria-label="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg></button></div>
+<script src="script.js"></script>
+</body></html>
